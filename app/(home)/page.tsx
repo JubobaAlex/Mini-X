@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Tweet from "./components/Tweet";
+import Main from "../components/Main";
 
 export default function Home() {
   return (
     <div>
-      
+      <Main />
     </div>
   );
 }
