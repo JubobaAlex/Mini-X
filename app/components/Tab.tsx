@@ -16,7 +16,7 @@ export default function Tab() {
     return (
         <div className="x-tab">
             <div className="x-logo">
-                <Link href="/">
+                <Link style={{ textDecoration: 'none' }} href="/">
                     <div className="logo-container">
                         <span className="x-icon">𝕏</span>
                     </div>
@@ -40,7 +40,7 @@ export default function Tab() {
             <div className="user-profile">
                 <div className="user-avatar">
                     <Image 
-                        src="/avatars/default.jpg" 
+                        src="/image/avatars/i.webp" 
                         width={40} 
                         height={40} 
                         alt="Avatar"
