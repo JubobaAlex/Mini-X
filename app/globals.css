@@ -7,8 +7,35 @@
 body {
     background-color: #000;
     color: #e7e9ea;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    text-decoration: none;
+.profile-header {
+    background-color: black;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #2f3336;
+    min-height: 100vh;
+}
+
+.div-profile {
+    display: flex;
+    border-right: 1px solid #2f3336;
+    min-height: 100vh;
+}
+
+.avatar-profile {
+    border-radius: 50%;
+}
+
+.profile {
+    border-bottom: 1px solid #2f3336;
+    padding: 15px;
+}
+
+.text-tweet-profile {
+    padding: 15px;
+    border-bottom: 1px solid #2f3336;
 }

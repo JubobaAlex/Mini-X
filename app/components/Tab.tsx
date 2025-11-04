@@ -26,7 +26,7 @@ export default function Tab() {
             <nav className="x-nav">
                 {navItems.map((item) => (
                     <div className= "x-nav-link" >
-                        <span className="x-nav-icon">{item.icon}</span>
+                        <Link href='/' className="x-nav-icon">{item.icon}</Link>
                         <span className="x-nav-text">{item.text}</span>
                     </div>
                     

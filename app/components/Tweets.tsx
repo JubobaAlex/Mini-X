@@ -4,6 +4,7 @@ import type { ITweet } from '../types/tweets.interface'
 import '../style/Tweets.css'
 import { useEffect, useState } from 'react'
 import Image from 'next/image';
+import Link from 'next/link'
 export default function Tweets() {
     interface TweetResponse {
     tweets: ITweet[]
@@ -39,7 +40,7 @@ export default function Tweets() {
                         height={40} 
                         alt="Avatar"
                         className="avatar-user" />
-                        <a href='/' style={{fontWeight:'bold', color:'white'}}>{property.author.displayName}</a>
+                       <Link href={`/user/${property.author.username}`}  style={{fontWeight:'bold', color:'white'}}>{property.author.displayName}</Link>
                         <p className='id-user-tweet'>@{property.author.username}</p>
                         <p className='time-tweet-create'>{property.createdAt}</p>
                     </div>
