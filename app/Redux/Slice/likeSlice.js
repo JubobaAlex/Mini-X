@@ -8,13 +8,9 @@ const likeslice = createSlice({
     reducers: {
          addLike: (state, action) => {  
             const tweetId = action.payload;
-
+            
             if(state.likesData[tweetId]) {
                 return
-            }
-
-            if(state.likesData[tweetId]) {
-                state.likesData[tweetId] += 1;
             } else {
                 state.likesData[tweetId] = 1;
             }
