@@ -1,0 +1,36 @@
+.tweets-osnova {
+    background-color: black;
+    width: 600px;
+    display: flex;
+    gap:30px;
+    border-right: 1px solid #2f3336;
+    flex-direction: column;
+    
+}
+.user-tweet {
+    border-bottom: 1px solid #2f3336;
+    border-top: 1px solid #2f3336;
+}
+.names-tweet {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+
+.avatar-user {
+     width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+
+.id-user-tweet , .time-tweet-create {
+    font-size: 15px;
+    color: #2f3336;
+    font-weight: bold;
+    
+}
