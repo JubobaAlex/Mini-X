@@ -9,6 +9,7 @@ export default function Tweets() {
     tweets: ITweet[]
 }
      const [tweet, setTweet] = useState<ITweet[]>([])
+     const [errors, setErrors] = useState<string | null>(null)
     useEffect(() => {
         Fetch()
     },[])
@@ -17,9 +18,13 @@ export default function Tweets() {
         const result = await axios.get<TweetResponse>('/data/tweet.json')
         setTweet(result.data.tweets)
         }
-        catch(err) {
-            console.log(err)
+        catch(err: any) {
+            setErrors(err)
         }
+    }
+
+    if(errors) {
+        return <div>Ошибка</div>
     }
    
     
