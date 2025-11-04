@@ -41,3 +41,22 @@ body {
     padding: 15px;
     border-bottom: 1px solid #2f3336;
 }
+
+.likes {
+    padding-top: 5px;
+}
+
+.likes button {
+    background: none;
+    border: none;
+     font-size: 20px;
+    color: white;
+}
+
+.likes button:hover {
+    animation-name: btn-likes;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}

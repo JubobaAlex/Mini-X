@@ -5,40 +5,56 @@ import Image from 'next/image'
 import axios from "axios"
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from "react"
-
+import { useDispatch, useSelector } from 'react-redux'
+import { addLike } from '@/app/Redux/Slice/likeSlice'
 export default function User() {
+
     const params = useParams()
     const username = params.username as string
     const [user, setUser] = useState<any>(null)
     const [tweet, setTweet] = useState<ITweet[]>([])
     const [errors, setErrors] = useState<string | null>(null)
-    
-    useEffect(() =>{
-        Poisk()
-    },[username])
-    
-    interface TweetResponse {
-        tweets: ITweet[]
-    }   
-    
-    async function Poisk() {
-        try {
-            const result = await axios.get<TweetResponse>('/data/tweet.json')
-            const information = result.data.tweets
 
-            const filterTweets = information.filter(tweet => 
-                tweet.author.username === username
-            )
-            if(filterTweets.length > 0) {
-                setUser(filterTweets[0].author)
-                setTweet(filterTweets)
-            } 
-        }
-        catch(err: any) {
-            setErrors(err.message)
-        }
+    //Для редукс
+    const dispatch = useDispatch()
+    const likesData = useSelector((state: any) => state.like.likesData)
+
+    function addedLike(tweetId: number) {
+        dispatch(addLike(tweetId))
     }
 
+
+    function getTotalLikes(tweetId: number, baseLikes: number) {
+    const additionalLikes = likesData[tweetId] || 0
+    return baseLikes + additionalLikes
+}
+
+    //конец кода для редукса
+    interface ResponseTweet {
+        tweets: ITweet[]
+    }
+    useEffect(() => {
+        Poisk()
+    },[username])
+
+    async function Poisk() {
+        try {
+        const response = await axios.get<ResponseTweet>('/data/tweet.json')
+        const result = response.data.tweets
+        
+        const fiterTweets = result.filter(userRes => 
+            userRes.author.username === username
+        )
+
+        if(fiterTweets.length  > 0) {
+            setUser(fiterTweets[0].author)
+            setTweet(fiterTweets)
+        }
+    }
+        catch(err: any) {
+            setErrors(errors)
+        }
+    }
     if (errors) {
         return <div>Error: {errors}</div>
     }
@@ -46,6 +62,8 @@ export default function User() {
     if (!user) {
         return <div>Loading</div>
     }
+
+
 
     return (
         <div className='div-profile'>
@@ -65,6 +83,9 @@ export default function User() {
                 <div className='lenta' key={res.id}>
                     <div className='text-tweet-profile'>
                         <p>{res.text}</p>
+                        <div className='likes'>
+                        <button onClick={() => addedLike(res.id, res.likes)}>❤{getTotalLikes(res.id, res.likes)}</button>
+                    </div>
                     </div>
                     
                 </div>

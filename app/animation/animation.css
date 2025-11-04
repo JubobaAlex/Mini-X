@@ -1,0 +1,8 @@
+@keyframes btn-likes {
+    0% {
+        background:none;
+    }
+    100% {
+        color: aquamarine;
+    }
+}

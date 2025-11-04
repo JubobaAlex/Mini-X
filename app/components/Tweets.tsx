@@ -5,9 +5,25 @@ import '../style/Tweets.css'
 import { useEffect, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
+import { useDispatch, useSelector } from 'react-redux'
+import {addLike} from '../Redux/Slice/likeSlice'
 export default function Tweets() {
     interface TweetResponse {
     tweets: ITweet[]
+}
+
+ //Для редукс
+    const dispatch = useDispatch()
+    const likesData = useSelector((state: any) => state.like.likesData)
+
+    function addedLike(tweetId: number) {
+        dispatch(addLike(tweetId))
+    }
+
+
+    function getTotalLikes(tweetId: number, baseLikes: number) {
+    const additionalLikes = likesData[tweetId] || 0
+    return baseLikes + additionalLikes
 }
      const [tweet, setTweet] = useState<ITweet[]>([])
      const [errors, setErrors] = useState<string | null>(null)
@@ -45,6 +61,9 @@ export default function Tweets() {
                         <p className='time-tweet-create'>{property.createdAt}</p>
                     </div>
                     <p>{property.text}</p>
+                    <div className='likes'>
+                        <button onClick={() => addedLike(property.id, property.likes)}>❤{getTotalLikes(property.id, property.likes)}</button>
+                    </div>
                 </div>
                 </div>
             ))}
