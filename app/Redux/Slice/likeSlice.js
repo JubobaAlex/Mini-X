@@ -10,7 +10,7 @@ const likeslice = createSlice({
             const tweetId = action.payload;
             
             if(state.likesData[tweetId]) {
-                return
+                return 
             } else {
                 state.likesData[tweetId] = 1;
             }

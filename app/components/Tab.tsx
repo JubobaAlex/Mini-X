@@ -25,10 +25,10 @@ export default function Tab() {
 
             <nav className="x-nav">
                 {navItems.map((item) => (
-                    <div className= "x-nav-link" >
-                        <Link href='/' className="x-nav-icon">{item.icon}</Link>
+                    <Link href='/' className= "x-nav-link" >
+                        <span className="x-nav-icon">{item.icon}</span>
                         <span className="x-nav-text">{item.text}</span>
-                    </div>
+                    </Link>
                     
                 ))}
             </nav>
