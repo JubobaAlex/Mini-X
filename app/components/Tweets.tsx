@@ -7,12 +7,12 @@ import Image from 'next/image';
 import Link from 'next/link'
 import { useDispatch, useSelector } from 'react-redux'
 import {addLike} from '../Redux/Slice/likeSlice'
+import { PostBtn } from './PostBtn'
 export default function Tweets() {
     interface TweetResponse {
     tweets: ITweet[]
 }
 
- //Для редукс
     const dispatch = useDispatch()
     const likesData = useSelector((state: any) => state.like.likesData)
 
@@ -47,6 +47,7 @@ export default function Tweets() {
     
     return (
         <div className='tweets-osnova'>
+            <PostBtn />
             {tweet.map(property =>(
                 <div  key={property.id}>
                     <div className='user-tweet'>

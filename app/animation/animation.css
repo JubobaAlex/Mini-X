@@ -6,3 +6,15 @@
         color: aquamarine;
     }
 }
+
+
+@keyframes btn-post {
+    0% {
+        background:white;
+
+    }
+    100% {
+        background: rgb(158, 158, 158);
+        border: 1px solid rgb(158, 158, 158);
+    }
+}

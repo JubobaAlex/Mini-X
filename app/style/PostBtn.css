@@ -1,0 +1,38 @@
+.formPost input {
+    background: none;
+    width: 500px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    height: 100px;
+    vertical-align: top;
+}
+
+.formPost {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.btn-post {
+    width: 70px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 35px;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: right;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.btn-post:hover {
+    animation-name: btn-post;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
