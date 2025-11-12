@@ -4,6 +4,11 @@ import Image from 'next/image'
 import '../animation/animation.css'
 
 export function PostBtn() {
+    const btn = document.querySelector('.btn-post')
+
+    function PostEnter() {
+        btn?.addEventListener('click' , () => Post )
+    }
     return(
         <div>
 
@@ -19,10 +24,11 @@ export function PostBtn() {
             />
                             </div>
             <input type="text" placeholder='What happening?' name="content" />
-        </form>
-        <div className='btn-div'>
-            <button className='btn-post'>Post</button>
+            <div className='btn-div'>
+            <button onClick={() => PostEnter} className='btn-post'>Post</button>
         </div>
+        </form>
+        
         
         </div>
     )
