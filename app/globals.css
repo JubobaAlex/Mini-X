@@ -62,6 +62,6 @@ body {
     cursor: pointer;
 }
 
-.btn-like.liked {
+.btn-like.Like {
     color: rgb(29, 155, 240);
 }
