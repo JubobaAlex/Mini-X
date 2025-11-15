@@ -11,10 +11,8 @@ export function PostBtn() {
     }
     return(
         <div>
-
-        
         <form className='formPost' action={Post}>
-            <div className="user-avatar">
+
              <Image 
                 src="/image/avatars/i.webp" 
                 width={40} 
@@ -22,7 +20,7 @@ export function PostBtn() {
                 alt="Avatar"
                 className="avatar-img"
             />
-                            </div>
+
             <input type="text" placeholder='What happening?' name="content" />
             <div className='btn-div'>
             <button onClick={() => PostEnter} className='btn-post'>Post</button>

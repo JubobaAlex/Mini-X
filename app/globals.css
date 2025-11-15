@@ -53,10 +53,15 @@ body {
     color: white;
 }
 
+
 .likes button:hover {
     animation-name: btn-likes;
     animation-duration: 0.5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     cursor: pointer;
+}
+
+.btn-like.liked {
+    color: rgb(29, 155, 240);
 }

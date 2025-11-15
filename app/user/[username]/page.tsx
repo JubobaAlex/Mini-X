@@ -14,7 +14,7 @@ export default function User() {
     const [user, setUser] = useState<any>(null)
     const [tweet, setTweet] = useState<ITweet[]>([])
     const [errors, setErrors] = useState<string | null>(null)
-
+    
     //Для редукс
     const dispatch = useDispatch()
     const likesData = useSelector((state: any) => state.like.likesData)
@@ -84,7 +84,7 @@ export default function User() {
                     <div className='text-tweet-profile'>
                         <p>{res.text}</p>
                         <div className='likes'>
-                        <button onClick={() => addedLike(res.id, res.likes)}>❤{getTotalLikes(res.id, res.likes)}</button>
+                        <button className='btn-like' onClick={() => addedLike(res.id, res.likes)}>❤{getTotalLikes(res.id, res.likes)}</button>
                     </div>
                     </div>
                     

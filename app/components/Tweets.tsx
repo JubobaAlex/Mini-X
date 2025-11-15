@@ -63,7 +63,7 @@ export default function Tweets() {
                     </div>
                     <p>{property.text}</p>
                     <div className='likes'>
-                        <button onClick={() => addedLike(property.id, property.likes)}>❤{getTotalLikes(property.id, property.likes)}</button>
+                         <button className='btn-like' onClick={() => addedLike(property.id, property.likes)}>❤{getTotalLikes(property.id, property.likes)}</button>
                     </div>
                 </div>
                 </div>
