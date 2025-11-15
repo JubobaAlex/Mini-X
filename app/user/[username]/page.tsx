@@ -84,7 +84,7 @@ export default function User() {
                     <div className='text-tweet-profile'>
                         <p>{res.text}</p>
                         <div className='likes'>
-                        <button className={`btn-like ${likesData[res.id] === 1 ? 'Like' : ''}`} onClick={() => addedLike(res.id, res.likes)}>❤{getTotalLikes(res.id, res.likes)}</button>
+                        <button className={`btn-like ${likesData[res.id] === 1 ? 'Like' : ''}`} onClick={() => addedLike(res.id)}>❤{getTotalLikes(res.id, res.likes)}</button>
                     </div>
                     </div>
                     
