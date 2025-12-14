@@ -11,8 +11,6 @@ const navItems = [
 ]
 
 export default function Tab() {
-
-    
     return (
         <div className="x-tab">
             <div className="x-logo">
@@ -25,17 +23,16 @@ export default function Tab() {
 
             <nav className="x-nav">
                 {navItems.map((item) => (
-                    <Link key={item.id} href='/' className= "x-nav-link" >
+                    <Link key={item.id} href='/' className="x-nav-link" >
                         <span className="x-nav-icon">{item.icon}</span>
                         <span className="x-nav-text">{item.text}</span>
                     </Link>
-                    
                 ))}
             </nav>
+            
             <button className="tweet-button">
                 <span className="tweet-button-text">Post</span>
             </button>
-
 
             <div className="user-profile">
                 <div className="user-avatar">

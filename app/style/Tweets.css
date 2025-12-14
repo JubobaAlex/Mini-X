@@ -35,3 +35,71 @@
     font-weight: bold;
     
 }
+
+@media (max-width: 1024px) {
+    .tweets-osnova {
+        width: 100%;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tweets-osnova {
+        width: 100%;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+        font-size: 25px;
+    }
+    
+    .user-tweet {
+        padding: 15px 0;
+    }
+    
+    .names-tweet {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-bottom: 15px;
+    }
+    
+    .avatar-user {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .id-user-tweet, .time-tweet-create {
+        font-size: 13px;
+    }
+    
+    .likes {
+        margin-top: 10px;
+    }
+    
+    .btn-like {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tweets-osnova {
+        gap: 10px;
+    }
+    
+    .names-tweet {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .avatar-user {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .user-tweet > p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+}

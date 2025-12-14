@@ -65,3 +65,114 @@ body {
 .btn-like.Like {
     color: rgb(29, 155, 240);
 }
+
+
+@media (max-width: 1024px) {
+    .div-profile {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .profile-header {
+        width: 100%;
+        border-right: none;
+        min-height: auto;
+    }
+    
+    .profile {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .profile {
+        padding: 15px;
+    }
+    
+    .text-tweet-profile {
+        padding: 15px;
+    }
+    
+    .avatar-profile {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    
+    .profile h1 {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+    
+    .profile p {
+        font-size: 16px;
+    }
+    
+    .lenta {
+        border-bottom: 1px solid #2f3336;
+    }
+    
+    .likes button {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile {
+        padding: 12px;
+        text-align: center;
+    }
+    
+    .avatar-profile {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .profile h1 {
+        font-size: 20px;
+    }
+    
+    .profile p {
+        font-size: 14px;
+    }
+    
+    .text-tweet-profile {
+        padding: 12px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .likes button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .profile {
+        padding: 10px;
+    }
+    
+    .avatar-profile {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    
+    .profile h1 {
+        font-size: 18px;
+    }
+    
+    .text-tweet-profile {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .likes button {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
