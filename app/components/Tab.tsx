@@ -3,16 +3,14 @@ import Image from 'next/image'
 import '../style/Tab.css'
 
 const navItems = [
-    { href: '/', icon: '🏠', text: 'Главная' },
-    { href: '/', icon: '🔍', text: 'Обзор' },
-    { href: '/', icon: '🔔', text: 'Уведомления' },
-    { href: '/', icon: '✉️', text: 'Сообщения' },
-    { href: '/', icon: '👤', text: 'Профиль' },
+    { id:0 ,href: '/', icon: '🏠', text: 'Главная' },
+    { id:1 ,href: '/', icon: '🔍', text: 'Обзор' },
+    { id:2 ,href: '/', icon: '🔔', text: 'Уведомления' },
+    { id:3 ,href: '/', icon: '✉️', text: 'Сообщения' },
+    { id:4 ,href: '/', icon: '👤', text: 'Профиль' },
 ]
 
 export default function Tab() {
-
-    
     return (
         <div className="x-tab">
             <div className="x-logo">
@@ -25,17 +23,16 @@ export default function Tab() {
 
             <nav className="x-nav">
                 {navItems.map((item) => (
-                    <Link href='/' className= "x-nav-link" >
+                    <Link key={item.id} href='/' className="x-nav-link" >
                         <span className="x-nav-icon">{item.icon}</span>
                         <span className="x-nav-text">{item.text}</span>
                     </Link>
-                    
                 ))}
             </nav>
+            
             <button className="tweet-button">
                 <span className="tweet-button-text">Post</span>
             </button>
-
 
             <div className="user-profile">
                 <div className="user-avatar">

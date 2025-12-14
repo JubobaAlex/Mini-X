@@ -38,3 +38,16 @@
     animation-fill-mode: forwards;
 }
 
+@media(max-width: 1024px) {
+    .formPost {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    gap: 5px;
+}
+
+    .formPost {
+        display: flex;
+        justify-content: center;
+    }
+}

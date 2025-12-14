@@ -11,7 +11,6 @@
     border-right: 1px solid #2f3336;
     
 }
-
 /* Логотип X */
 .x-logo {
     padding: 12px 0;
@@ -136,3 +135,58 @@
 }
 
 
+@media (max-width: 1024px) {
+    .x-tab {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        padding: 10px 15px;
+        border-right: none;
+        border-bottom: 1px solid #2f3336;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .x-logo {
+        padding: 0;
+        margin-bottom: 0;
+    }
+    
+    .x-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    
+    .x-nav-link {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+    
+    .x-nav-text {
+        display: none;
+    }
+    
+    .tweet-button {
+        width: auto;
+        padding: 10px 15px;
+        margin: 0 10px;
+        white-space: nowrap;
+    }
+    
+    .user-profile {
+        margin-bottom: 0;
+        
+    }
+    
+    .user-info {
+        display: none;
+    }
+
+    .tweet-button {
+        display: none;
+        
+    }
+}

@@ -1,6 +1,6 @@
 'use client'
 import Tab from '@/app/components/Tab'
-import { ITweet } from '../types/tweets.interface'
+import type { ITweet } from '../types/tweets.interface'
 import Image from 'next/image'
 import axios from "axios"
 import { useParams } from 'next/navigation'
