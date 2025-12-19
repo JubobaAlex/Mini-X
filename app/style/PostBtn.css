@@ -33,7 +33,7 @@
 
 .btn-post:hover {
     animation-name: btn-post;
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
