@@ -75,6 +75,7 @@ export default function User() {
             width={80} 
             height={80} 
             alt="Avatar"
+            loading="lazy"
             className="avatar-profile" />
             <h1>{user.displayName}</h1>
             <p>@{user.username}</p>
